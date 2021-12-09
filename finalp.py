@@ -49,20 +49,20 @@ df_avg = df[df["area_code"] == "0000"]
 
 st.write("We will count the different types of gasoline this dataset contains:")
 
-st.write(df_avg["item_code"].value_counts())
+#gas_counts = df_avg["item_code"].value_counts()
 
-#st.write("`item_code item_name\n74712	Gasoline, leaded regular (cost per gallon/3.8 liters)\n74713	Gasoline, leaded premium (cost per gallon/3.8 liters)\n74714	Gasoline, unleaded regular, per gallon/3.785 liters\n74715	Gasoline, unleaded midgrade, per gallon/3.785 liters\n74716	Gasoline, unleaded premium, per gallon/3.785 liters\n74717	Automotive diesel fuel, per gallon/3.785 liters\n7471A	Gasoline, all types, per gallon/3.785 liters`")
+st.bar_chart(df_avg["item_code"].value_counts())
 
 #Copied from ap.item
 
-#item_code item_name
-#74712	Gasoline, leaded regular (cost per gallon/3.8 liters)
-#74713	Gasoline, leaded premium (cost per gallon/3.8 liters)
-#74714	Gasoline, unleaded regular, per gallon/3.785 liters
-#74715	Gasoline, unleaded midgrade, per gallon/3.785 liters
-#74716	Gasoline, unleaded premium, per gallon/3.785 liters
-#74717	Automotive diesel fuel, per gallon/3.785 liters
-#7471A	Gasoline, all types, per gallon/3.785 liters
+#item_code  item_name
+#74712	    Gasoline, leaded regular (cost per gallon/3.8 liters)
+#74713	    Gasoline, leaded premium (cost per gallon/3.8 liters)
+#74714	    Gasoline, unleaded regular, per gallon/3.785 liters
+#74715	    Gasoline, unleaded midgrade, per gallon/3.785 liters
+#74716	    Gasoline, unleaded premium, per gallon/3.785 liters
+#74717	    Automotive diesel fuel, per gallon/3.785 liters
+#7471A	    Gasoline, all types, per gallon/3.785 liters
 
 st.write("Note that the type of gasoline with most data points is code `74714`, which refers to the price of unleaded regular gasoline per US gallon. We will isolate those values and sort them by year and month for further calculation.")
 
